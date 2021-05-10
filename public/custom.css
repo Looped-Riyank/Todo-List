@@ -83,7 +83,7 @@ p {
     margin: 0;
     padding: 20px;
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 500;
     color: #00204a;
   }
   
@@ -179,7 +179,11 @@ footer {
       width: 265px;
     }
 
-  
+    .minbtn{
+      margin-right: 14px;
+      font-size: 48px;
+    }
+
     p{
       width: 180px;
     }
