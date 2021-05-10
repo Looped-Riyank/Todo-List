@@ -1,0 +1,52 @@
+<%- include("header") -%>
+
+    <div class="quote">
+        <h1>"The secret of getting started is getting ahead." - Mark Twain </h1>
+        
+    </div>
+
+
+    <div class="box" id="heading">
+        <h1> <%= todoTitle %>  </h1>
+    </div>
+
+
+    <div class="box">
+        <% var i %>
+        <% for(i=0 ; i<additem.length ; i++) { %>
+        <%    if(additem[i].item === '') {   %>
+           <%  console.log("Add something")   %> 
+         <%  } else {    %>
+                <form action="/delete" method="POST">
+                    <div class="item">
+                        <input type="checkbox">
+                        <p><%= additem[i].item %> </p>   
+                        <button type="submit" class="minbtn" name="remove" value="<%= additem[i].item %>">-</button>
+
+                    </div>
+                    <input type="hidden" name = "titleName" value="<%= todoTitle %>">
+                </form>
+                <%    }  %>
+
+       <% } %>
+
+       <form  class="item" action="/" method="POST">
+        <input type="text" class="todo-input" placeholder="New Item" name="todo" autocomplete="off">
+        <button type="submit" class="btn" name="titleName" value="<%= todoTitle %>">+</button>
+      </form>
+    </div>
+
+    
+        <form class= "dtbtn"action="/deleteAll" method="POST">
+            <button class="dtbt"type="submit" name= "all"  value="<%= todoTitle %>">Delete All</button>
+        </form>
+
+  
+
+
+ 
+
+    
+<%- include("footer") -%>        
+
+    
