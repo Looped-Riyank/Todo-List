@@ -119,11 +119,12 @@ footer {
 
   .dtbtn {
     display: flex;
-    min-height: 70px;
     align-items: center;
     justify-content: center;
     position: relative;
-    bottom: 30px; 
+    bottom: 25px;
+    margin-bottom: 20px;
+   
 
 
     
@@ -133,7 +134,6 @@ footer {
 
     width: 100px;
     height: 40px;
-
     border-color: transparent;
     background-color: #A683E3;
     color: #fff;
@@ -181,6 +181,28 @@ footer {
     }
 
    
+  }
+
+  @media only screen and (max-width: 340px) {
+
+    input[type="text"] {
+      width: 200px;
+    }
+
+    p {
+      width: 165px;
+    }
+
+    .box {
+      max-width: 265px;
+    }
+
+  
+
+
+
+
+
   }
   
 
