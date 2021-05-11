@@ -164,11 +164,11 @@ footer {
     }
 
     .box{
-      max-width: 330px;
+      max-width: 300px;
     }
 
     input[type="text"] {
-      width: 265px;
+      width: 235px;
     }
 
     .minbtn{
@@ -177,20 +177,26 @@ footer {
     }
 
     p{
-      width: 230px;
+      width: 200px;
+      overflow-wrap: break-word;
     }
 
+    .dtbt {
+      max-width: 110px;
+    }
 
+    footer {
+      margin-bottom: 75px;
+    }
 
-   
-
-
-
-    
-
-   
    
   }
+
+
+
+
+
+
   
 
 
