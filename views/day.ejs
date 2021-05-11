@@ -14,20 +14,15 @@
     <div class="box">
         <% var i %>
         <% for(i=0 ; i<additem.length ; i++) { %>
-        <%    if(additem[i].item === '') {   %>
-           <%  console.log("Add something")   %> 
-         <%  } else {    %>
                 <form action="/delete" method="POST">
                     <div class="item">
-                        <input type="checkbox">
                         <p><%= additem[i].item %> </p>   
                         <button type="submit" class="minbtn" name="remove" value="<%= additem[i].item %>">-</button>
 
                     </div>
                     <input type="hidden" name = "titleName" value="<%= todoTitle %>">
                 </form>
-                <%    }  %>
-
+            
        <% } %>
 
        <form  class="item" action="/" method="POST">

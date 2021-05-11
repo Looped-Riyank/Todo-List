@@ -62,25 +62,15 @@ h1 {
     border-bottom: 0;
   }
   
-input:checked+p {
-    text-decoration: line-through;
-    text-decoration-color: #A683E3;
-  }
-  
-input[type="checkbox"] {
-    margin: 20px;
-    width: 20px;
-    height: 30px;
-    justify-content: center;
-    cursor: pointer;
-    
-  }
+
+
   
 p {
     display: inline-block;
-    width: 250px;
+    width: 300px;
     word-wrap: break-word;
     margin: 0;
+    margin-left: 9px;
     padding: 20px;
     font-size: 20px;
     font-weight: 500;
@@ -156,6 +146,11 @@ footer {
 
   }
 
+  ::placeholder{
+    
+    font-weight: bolder;
+  }
+
   @media only screen and (max-width: 768px) {
 
     html {
@@ -185,8 +180,12 @@ footer {
     }
 
     p{
-      width: 180px;
+      width: 230px;
     }
+
+
+
+   
 
 
 

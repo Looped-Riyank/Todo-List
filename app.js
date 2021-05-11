@@ -4,6 +4,7 @@ const mongoose = require("mongoose")
 
 const lodash = require("lodash")
 
+
 mongoose.connect('mongodb+srv://admin-riyank:looped@cluster0.vxkct.mongodb.net/ToDo-DB', {useNewUrlParser: true, useUnifiedTopology: true});
 
 const app = express()
@@ -143,9 +144,6 @@ app.get("/:test" , function(req , res) {
 
 
 
-
-
-
 })
 
   
@@ -155,56 +153,56 @@ app.post("/" , function(req ,res ) {
 
 
 
-
   var y = req.body.todo
 
-  // console.log ("This is string " + y)
+  if (y === "") {
 
+    console.log("Add something")
 
-  const itemz = new ToDo({
- 
-    item : y
- 
+    res.redirect("back")
     
-  })
-
-  // console.log("This is object" + itemz)
-
-  if(req.body.titleName === "Today"){
-
-  
-   
-    itemz.save();
-    
-    res.redirect("/")
-
-
   } else {
 
-    List.findOne({name : req.body.titleName} , function(err , foundPush) {
-      if(err) {
-        console.log(err)
-      } else {
-       
-
-        foundPush.items.push(itemz)
-
-        foundPush.save()
-
-        
-
-        res.redirect("/" +  req.body.titleName)
-      }
+    const itemz = new ToDo({
+ 
+      item : y
+   
+      
     })
-
-
-
+  
+    // console.log("This is object" + itemz)
+  
+    if(req.body.titleName === "Today"){
+  
+    
+     
+      itemz.save();
+      
+      res.redirect("/")
+  
+  
+    } else {
+  
+      List.findOne({name : req.body.titleName} , function(err , foundPush) {
+        if(err) {
+          console.log(err)
+        } else {
+         
+  
+          foundPush.items.push(itemz)
+  
+          foundPush.save()
+  
+          
+  
+          res.redirect("/" +  req.body.titleName)
+        }
+      })
+  
+    }
+  
   }
 
-
-
-
-  
 
 })
 
