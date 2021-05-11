@@ -4,7 +4,6 @@ const mongoose = require("mongoose")
 
 const lodash = require("lodash")
 
-let alert = require('alert'); 
 
 mongoose.connect('mongodb+srv://admin-riyank:looped@cluster0.vxkct.mongodb.net/ToDo-DB', {useNewUrlParser: true, useUnifiedTopology: true});
 
@@ -158,9 +157,7 @@ app.post("/" , function(req ,res ) {
 
   if (y === "") {
 
-    alert("Enter the Task")
-
-
+    console.log("Add something")
 
     res.redirect("back")
     
