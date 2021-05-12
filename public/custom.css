@@ -5,6 +5,7 @@ html {
     min-height: 1000px;
     font-family: 'helvetica neue';
     width: 100%;
+    
   }
   
 h1 {
@@ -149,7 +150,7 @@ footer {
 
  
 
-  @media only screen and (max-width: 768px) {
+  /* @media only screen and (max-width: 768px) {
 
     html {
       min-height: 800px;
@@ -182,9 +183,9 @@ footer {
     }
 
    
-  }
+  } */
 
-  @media only screen and (max-width: 400px) {
+  /* @media only screen and (max-width: 400px) {
 
     input[type="text"] {
       width: 200px;
@@ -204,6 +205,49 @@ footer {
 
 
 
+  } */
+
+
+
+  @media only screen and (max-width: 768px) {
+
+    html {
+      min-height: 800px;
+    }
+
+    button {
+      margin-bottom: 5px;
+
+    }
+
+    form.item {
+      margin-left: 0px;
+    }
+
+    .box{
+      max-width: 250px;
+    }
+
+    input[type="text"] {
+      max-width: 180px;
+    }
+
+    .minbtn{
+      margin-right: 14px;
+      font-size: 48px;
+      
+    }
+
+    p{
+   
+      max-width: 150px;
+    }
+
+    .dtbtn {
+   
+    }
+
+   
   }
   
 
