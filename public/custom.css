@@ -4,6 +4,7 @@ html {
     background-color: black;
     min-height: 1000px;
     font-family: 'helvetica neue';
+    width: 100%;
   }
   
 h1 {
@@ -183,7 +184,7 @@ footer {
    
   }
 
-  @media only screen and (max-width: 340px) {
+  @media only screen and (max-width: 400px) {
 
     input[type="text"] {
       width: 200px;
