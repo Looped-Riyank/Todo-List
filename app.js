@@ -79,7 +79,9 @@ const List = mongoose.model("list" , listScehema )
 
 app.get("/" , function(req , res) {
 
-  
+  analytics.page("TODO" , {
+    name : "Todo"
+  })
 
 
     ToDo.find(function(err, todo ) {
