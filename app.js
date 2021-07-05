@@ -17,13 +17,13 @@ app.set('view engine', 'ejs')
 
 // var items = []
 
-const todoSchema = mongoose.Schema({
+const todoSchema = new mongoose.Schema({
 
   item :  String ,
 
 })
 
-const listScehema = mongoose.Schema({
+const listScehema = new mongoose.Schema({
 
   name : String ,
 
