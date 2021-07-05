@@ -5,7 +5,7 @@ const mongoose = require("mongoose")
 const lodash = require("lodash")
 
 var Analytics = require('analytics-node');
-var analytics = new Analytics('JSHdlE9loIuzJkaPniSXvjljWqQW44pc');
+var analytics = new Analytics('MyYAtajRcK8v0Yp3pM2f0CMgTYMSAmyV');
 
 
 mongoose.connect('mongodb+srv://admin-riyank:looped@cluster0.vxkct.mongodb.net/ToDo-DB', {useNewUrlParser: true, useUnifiedTopology: true});
