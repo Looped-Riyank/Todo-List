@@ -4,6 +4,9 @@ const mongoose = require("mongoose")
 
 const lodash = require("lodash")
 
+var Analytics = require('analytics-node');
+var analytics = new Analytics('JSHdlE9loIuzJkaPniSXvjljWqQW44pc');
+
 
 mongoose.connect('mongodb+srv://admin-riyank:looped@cluster0.vxkct.mongodb.net/ToDo-DB', {useNewUrlParser: true, useUnifiedTopology: true});
 
@@ -75,6 +78,8 @@ const List = mongoose.model("list" , listScehema )
 
 
 app.get("/" , function(req , res) {
+
+  
 
 
     ToDo.find(function(err, todo ) {
